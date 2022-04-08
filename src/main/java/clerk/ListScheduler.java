@@ -1,12 +1,14 @@
 package clerk;
 
-import lombok.AllArgsConstructor;
 import java.util.Comparator;
 
-@AllArgsConstructor
 public class ListScheduler {
 
     final private Comparator<Task> orderingStrategy;
+
+    public ListScheduler(Comparator<Task> orderingStrategy) {
+        this.orderingStrategy = orderingStrategy;
+    }
 
     /**
      * Schedule each task for the resource that is available first.
